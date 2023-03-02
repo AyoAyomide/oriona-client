@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anime with a-frame</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <script type="module" src="./src/js/index.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script type="module" src="./src/js/components/camera.js"></script>
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <a-scene background="color: #4a4a48">
+        <!-- <a-box animation-camera position="0 1 -5" rotation="0 0 0" color="#4CC3D9" shadow></a-box> -->
+        <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="10" color="#7BC8A4" shadow></a-plane>
+    </a-scene>
 </body>
-<script defer type="module" src="./src/js/index.js"></script>
 
 </html>
