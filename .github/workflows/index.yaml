@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   Deploy-VR:
@@ -23,4 +25,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist 
+          folder: dist
