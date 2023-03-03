@@ -8,14 +8,19 @@
     <title>Anime with a-frame</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <script type="module" src="./src/js/index.js"></script>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script> -->
+    <script src="/src/pkg/aframe.js"></script>
+    <!-- <script type="module" src="./src/pkg/aframe_inspect.js" data-name="aframe-inspector"></script> -->
+    <script type="module" src="./src/js/components/move.js"></script>
     <script type="module" src="./src/js/components/camera.js"></script>
 </head>
 
 <body>
     <a-scene background="color: #4a4a48">
-        <!-- <a-box animation-camera position="0 1 -5" rotation="0 0 0" color="#4CC3D9" shadow></a-box> -->
-        <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="10" color="#7BC8A4" shadow></a-plane>
+        <a-sphere height="100" width="100" material="side:back;" color="red" position="0 1.6 -3"></a-sphere>
+        <a-camera far="5" fov="20"></a-camera>
+        <a-entity oculus-touch-controls="hand: left"></a-entity>
+        <a-entity move oculus-touch-controls="hand: right"></a-entity>
     </a-scene>
 </body>
 
