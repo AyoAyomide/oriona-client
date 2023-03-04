@@ -17,7 +17,7 @@ AFRAME.registerComponent('move', {
         let speed = 5;
         let velocity = speed * (deltaTime / 1000000);
         if (this.stickStop > 1) moveObject(this.camera, this.direction, velocity);
-        console.log(this.stickStop, this.direction);
+        // console.log(this.stickStop, this.direction);
         // moveObject(this.camera, 'BACKWARD', velocity);
         // this.logThumbstick('name', this.camera, 0.0001)
         // console.log(1 * (deltaTime / 100000));
