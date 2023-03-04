@@ -4,10 +4,9 @@ AFRAME.registerComponent('move', {
         if (this.el.id == 'right') {
             camera = document.querySelector('#rig');
         } else {
-            camera = document.querySelector('a-box');
+            // camera = document.querySelector('a-box');
         }
         this.el.addEventListener('thumbstickmoved', (events) => (this.logThumbstick(events, camera)));
-        console.log(camera.object3D);
     },
     logThumbstick: function (evt, object) {
         if (evt.detail.y > 0.95) { console.log("DOWN"); moveObject(object, 'BACKWARD') }
@@ -18,7 +17,7 @@ AFRAME.registerComponent('move', {
 });
 
 function moveObject(object, direction) {
-    let speed = 0.1,
+    let speed = 1,
         calc = {
             BACKWARD: () => { object.object3D.position.z += speed; },
             FORWARD: () => { object.object3D.position.z -= speed },

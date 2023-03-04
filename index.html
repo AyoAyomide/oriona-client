@@ -12,7 +12,6 @@
     <script
         src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@tagOrCommit/dist/aframe-extras.min.js"></script>
     <!-- <script src="/src/pkg/aframe.js"></script> -->
     <!-- <script type="module" src="./src/pkg/aframe_inspect.js" data-name="aframe-inspector"></script> -->
     <script type="module" src="./src/js/components/move.js"></script>
@@ -20,18 +19,14 @@
 </head>
 
 <body>
-
-
     <a-scene background="color: #4a4a48" renderer="antialias: true" stats environment="preset:tron;seed:2;">
-        <!-- <a-sphere height="100" width="100" material="side:double;" color="red" position="0 1.6 -3">
-            <a-box height="0.5" width="0.5" color="blue"></a-box>
-        </a-sphere> -->
-        <a-plane color="red" width="1" height="1"></a-plane>
-        <a-entity id="rig" position="25 0 25">
-            <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true"></a-entity>
+        <a-box color="red" width="1" height="1" position="0 0 0"></a-box>
+        <a-entity id="rig">
+            <a-camera></a-camera>
+            <a-entity id="left" move oculus-touch-controls="hand: left"></a-entity>
+            <a-entity id="right" move oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
-        <a-entity id="left" move oculus-touch-controls="hand: left"></a-entity>
-        <a-entity id="right" move oculus-touch-controls="hand: right"></a-entity>
+
     </a-scene>
 </body>
 
