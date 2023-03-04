@@ -2,7 +2,7 @@ AFRAME.registerComponent('move', {
     init: function () {
         let camera;
         if (this.el.id == 'right') {
-            camera = document.querySelector('a-sphere');
+            camera = document.querySelector('#rig');
         } else {
             camera = document.querySelector('a-box');
         }
