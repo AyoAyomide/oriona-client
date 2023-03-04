@@ -17,10 +17,12 @@
 
 <body>
     <a-scene background="color: #4a4a48">
-        <a-sphere height="100" width="100" material="side:back;" color="red" position="0 1.6 -3"></a-sphere>
+        <a-sphere height="100" width="100" material="side:double;" color="red" position="0 1.6 -3">
+            <a-box height="0.5" width="0.5" color="blue"></a-box>
+        </a-sphere>
         <a-camera far="5" fov="20"></a-camera>
-        <a-entity oculus-touch-controls="hand: left"></a-entity>
-        <a-entity move oculus-touch-controls="hand: right"></a-entity>
+        <a-entity id="left" move oculus-touch-controls="hand: left"></a-entity>
+        <a-entity id="right" move oculus-touch-controls="hand: right"></a-entity>
     </a-scene>
 </body>
 

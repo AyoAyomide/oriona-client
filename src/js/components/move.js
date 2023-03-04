@@ -1,7 +1,11 @@
 AFRAME.registerComponent('move', {
     init: function () {
-        // Do something when component first attached.
-        let camera = document.querySelector('a-camera');
+        let camera;
+        if (this.el.id == 'right') {
+            camera = document.querySelector('a-sphere');
+        } else {
+            camera = document.querySelector('a-box');
+        }
         this.el.addEventListener('thumbstickmoved', (events) => (this.logThumbstick(events, camera)));
         console.log(camera.object3D);
     },
