@@ -7,7 +7,7 @@ export default defineConfig((command, mode)=>{
     }
   } else {
     return {
-      base:'/'
+      base:'/vr-animation/'
     }
   }
 })
