@@ -1,7 +1,7 @@
 AFRAME.registerComponent('move', {
     init: function () {
         this.stickStop = 0;
-        this.direction = "UP";
+        this.direction = "FORWARD";
         this.camera = document.querySelector('#rig');
         this.el.addEventListener('thumbstickmoved', (events) => { this.stickStop += 1; this.logThumbstick(events) });
     },
@@ -14,20 +14,14 @@ AFRAME.registerComponent('move', {
         if (x > 0.95) { console.log("RIGHT"); this.direction = "RIGHT"; }
     },
     tick: function (deltaTime) {
-        let speed = 5;
+        let speed = 1;
         let velocity = speed * (deltaTime / 1000000);
         if (this.stickStop > 1) moveObject(this.camera, this.direction, velocity);
-        // console.log(this.stickStop, this.direction);
-        // moveObject(this.camera, 'BACKWARD', velocity);
-        // this.logThumbstick('name', this.camera, 0.0001)
-        // console.log(1 * (deltaTime / 100000));
-        // this.el.addEventListener('thumbstickmoved', (events) => (this.logThumbstick(events, this.camera, velocity)));
-
     }
 });
 
 function moveObject(object, direction, time) {
-    let speed = 1,
+    let speed = 5,
         calc = {
             BACKWARD: () => { object.object3D.position.z += time; },
             FORWARD: () => { object.object3D.position.z -= time; },
