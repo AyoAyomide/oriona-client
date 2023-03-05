@@ -27,8 +27,6 @@
             <!-- <a-img id="sky" src="./src/img/sky.jpeg"></a-img> -->
             <a-asset-item id="ship_glb" src="./src/gltf/ship.glb"></a-asset-item>
         </a-asset>
-        <!-- <a-sky material="shader: gradientshader; topColor: #3E3D3E; bottomColor: #FFFFFF; side: back; npot: true; offset: 0 0; repeat: 1 1"></a-sky> -->
-        <a-plane height="500" width="300" rotation="-90 0 0" material="repeat:10 10;color:#3E3D3E;"></a-plane>
         <a-entity id="rig">
             <!-- <a-box shadow="receive: false" width="5" height="1" color="red" position="0 0.5 -5"></a-box> -->
             <a-entity gltf-model="#ship_glb" id="boost" position="0 1 0" scale="0.5 0.5 0.5"></a-entity>
@@ -37,10 +35,6 @@
             <a-entity id="right" move oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
 
-        <!-- <a-entity light="type: ambient; color: #828282; intensity: 1"></a-entity>
-        <a-light intensity="1" type="directional" position="0 5 0" rotation="-30 180 180" target="#directionaltarget">
-            <a-entity id="directionaltarget" position="0 5 -3"></a-entity>
-        </a-light> -->
     </a-scene>
 </body>
 
