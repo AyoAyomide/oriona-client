@@ -20,28 +20,27 @@
 
 <body>
     <!-- environment="preset:tron;seed:2;" -->
-    <a-scene renderer="antialias: true" stats fog>
+    <a-scene renderer="antialias: true" stats fog environment="preset:tron;seed:2;">
         <a-asset>
             <!-- <audio id="rocket" src="./asset/sounds/rocket_sound.mp3" preload="auto"></audio> -->
-            <a-img id="road" src="./src/img/albedo.jpg"></a-img>
-            <a-img id="sky" src="./src/img/sky.jpeg"></a-img>
+            <!-- <a-img id="road" src="./src/img/albedo.jpg"></a-img> -->
+            <!-- <a-img id="sky" src="./src/img/sky.jpeg"></a-img> -->
             <a-asset-item id="ship_glb" src="./src/gltf/ship.glb"></a-asset-item>
         </a-asset>
-        <a-sky
-            material="shader: gradientshader; topColor: #3E3D3E; bottomColor: #FFFFFF; side: back; npot: true; offset: 0 0; repeat: 1 1"></a-sky>
+        <!-- <a-sky material="shader: gradientshader; topColor: #3E3D3E; bottomColor: #FFFFFF; side: back; npot: true; offset: 0 0; repeat: 1 1"></a-sky> -->
         <a-plane height="500" width="300" rotation="-90 0 0" material="repeat:10 10;color:#3E3D3E;"></a-plane>
         <a-entity id="rig">
-            <a-box shadow="receive: false" width="5" height="1" color="red" position="0 0.5 -5"></a-box>
-            <!-- <a-entity gltf-model="#ship_glb" id="boost" position="0 1 0" scale="0.5 0.5 0.5"></a-entity> -->
+            <!-- <a-box shadow="receive: false" width="5" height="1" color="red" position="0 0.5 -5"></a-box> -->
+            <a-entity gltf-model="#ship_glb" id="boost" position="0 1 0" scale="0.5 0.5 0.5"></a-entity>
             <a-camera></a-camera>
             <a-entity id="left" oculus-touch-controls="hand: left"></a-entity>
             <a-entity id="right" move oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
 
-        <a-entity light="type: ambient; color: #828282; intensity: 0.39"></a-entity>
-        <a-light intensity="3" type="directional" position="0 5 0" rotation="-30 180 180" target="#directionaltarget">
+        <!-- <a-entity light="type: ambient; color: #828282; intensity: 1"></a-entity>
+        <a-light intensity="1" type="directional" position="0 5 0" rotation="-30 180 180" target="#directionaltarget">
             <a-entity id="directionaltarget" position="0 5 -3"></a-entity>
-        </a-light>
+        </a-light> -->
     </a-scene>
 </body>
 
