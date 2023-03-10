@@ -13,6 +13,7 @@
   "dependencies": {
     "aframe": "^1.4.1",
     "dat.gui": "^0.7.9",
-    "vite": "^4.1.4"
+    "vite": "^4.1.4",
+    "vite-plugin-static-copy": "^0.13.1"
   }
 }
