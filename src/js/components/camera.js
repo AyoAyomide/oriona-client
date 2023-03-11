@@ -9,3 +9,11 @@
 //         });
 //     }
 // });
+
+navigator.mediaDevices.getUserMedia({ audio: true })
+  .then(function (stream) {
+    var audioContext = new AudioContext();
+    var source = audioContext.createMediaStreamSource(stream);
+    // Use the audio source in your Three.js code
+  });
+
