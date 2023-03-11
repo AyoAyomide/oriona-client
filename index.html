@@ -9,26 +9,26 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <script type="module" src="./src/js/index.js"></script>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script
-        src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
-
+    <!-- <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script> -->
     <!-- <script src="/src/pkg/aframe.js"></script> -->
     <!-- <script type="module" src="./src/pkg/aframe_inspect.js" data-name="aframe-inspector"></script> -->
     <script type="module" src="./src/js/components/move.js"></script>
     <script type="module" src="./src/js/components/camera.js"></script>
+    <script type="module" src="./src/js/components/intro.js"></script>
 </head>
 
 <body>
     <!-- environment="preset:tron;seed:2;" -->
-    <a-scene renderer="antialias: true" stats color="grey">
+    <a-scene intro-audio renderer="antialias: true" stats color="grey">
         <a-asset>
-            <!-- <audio id="rocket" src="./asset/sounds/rocket_sound.mp3" preload="auto"></audio> -->
+            <audio id="room" src="./src/sounds/music/_small.mp3" preload="auto"></audio>
+            <audio id="intro" src="./src/sounds/audio/intro.mp3" preload="auto"></audio>
             <!-- <a-img id="road" src="./src/img/albedo.jpg"></a-img> -->
             <!-- <a-img id="sky" src="./src/img/sky.jpeg"></a-img> -->
             <a-asset-item id="ship_glb" src="./src/gltf/orion.glb"></a-asset-item>
         </a-asset>
-        <a-box position="0 2 -3" color="white" scale="8 4 8" material="side:back;"></a-box>
-        <a-gltf-model src="#ship_glb" position="0 1.5 -4" scale="1 1 1"></a-gltf-model>
+        <a-box sound="src: #room;autoplay: true;volume:0.5" position="0 2 -3" color="white" scale="8 4 8" material="side:back;"></a-box>
+        <a-gltf-model id="orion" sound="src: #intro;" src="#ship_glb" position="0 1.5 -4" scale="1 1 1"></a-gltf-model>
         <a-entity id="rig">
             <a-camera></a-camera>
             <a-entity id="left" oculus-touch-controls="hand: left"></a-entity>

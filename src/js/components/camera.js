@@ -1,19 +1,11 @@
-import { gui } from "..";
-
-AFRAME.registerComponent('animation-camera', {
-    init: function () {
-    },
-
-    update: function () {
-        this.el.object3D.rotation.y = this.rotation.y;
-        // Do something when component's data is updated.
-    },
-
-    remove: function () {
-        // Do something the component or its entity is detached.
-    },
-
-    tick: function (time, timeDelta) {
-    
-    }
-});
+// Rotate camera
+// AFRAME.registerComponent('camera-rotate', {
+//     init: function () {
+//         let camera = document.querySelector('#camera');
+//         this.el.addEventListener('enter-vr', (events) => {
+//             setTimeout(() => {
+//                 camera.setAttribute('rotation', '0 90 0');
+//             }, 2000);
+//         });
+//     }
+// });

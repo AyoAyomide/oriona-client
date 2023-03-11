@@ -16,7 +16,11 @@ export default defineConfig((command, mode) => {
             {
               src: 'src/gltf/*.glb',
               dest: 'src/gltf'
-            }
+            },
+            {
+              src: 'src/sounds/*',
+              dest: 'src/sounds'
+            },
           ]
         })
       ]
