@@ -8,7 +8,7 @@ export default defineConfig((command, mode) => {
     }
   } else {
     return {
-      base: '/vr-animation/',
+      base: '/oriona',
       assetsInclude: ['**/*.glb'],
       plugins: [
         viteStaticCopy({
