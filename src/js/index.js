@@ -1,8 +1,9 @@
-import * as dat from 'dat.gui';
+// import * as dat from 'dat.gui';
 
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
-// const socket = io('http://localhost:3000');
+// const socket = io(import.meta.env.VITE_SOCKET_URL);
+
 
 // socket.on("connect", () => {
 //     console.log('socket connected');
@@ -11,4 +12,4 @@ const gui = new dat.GUI();
 //     console.log('socket disconnected');
 // });
 
-export { gui };
+// export { socket };

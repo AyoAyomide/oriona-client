@@ -31,11 +31,21 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
+      - name: Setup env
+        run: |
+          # echo "VITE_SOCKET_URL=${{ secrets.REACT_APP_API_URL }}" >> .env
+          echo "VITE_SOCKET_URL=http://localhost:3380" >> .env
+          echo "VITE_REQUEST_URL=http://localhost:3380/api/request" >> .env
+          echo "VITE_RESPONSE_URL=http://localhost:3380/api/response" >> .env
+
+          mv .env ./dist/.env
+        shell: bash
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './dist'
-          
+          path: "./dist"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

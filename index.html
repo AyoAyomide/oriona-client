@@ -17,18 +17,16 @@
     <!-- <script src="/src/pkg/aframe.js"></script> -->
     <!-- <script type="module" src="./src/pkg/aframe_inspect.js" data-name="aframe-inspector"></script> -->
     <script type="module" src="./src/js/components/move.js"></script>
-    <!-- <script type="module" src="./src/js/components/webaudiorequest.js"></script> -->
-    <!-- <script type="module" src="./src/js/components/webaudioresponse.js"></script> -->
-    <!-- <script type="module" src="./src/js/components/intro.js"></script> -->
+    <script type="module" src="./src/js/components/webaudiorequest.js"></script>
+    <script type="module" src="./src/js/components/webaudioresponse.js"></script>
 
 </head>
 
 <body>
-    <!-- environment="preset:tron;seed:2;" -->
     <a-scene intro-audio renderer="antialias: true" color="grey">
         <a-asset>
             <audio id="room" src="./src/sounds/music/_small.mp3" preload="auto"></audio>
-            <audio id="intro" src="./src/sounds/audio/intro.mp3" preload="auto"></audio>
+            <!-- <audio id="intro" src="./src/sounds/audio/intro.mp3" preload="auto"></audio> -->
             <a-asset-item id="oriona_glb" src="./src/gltf/orion.glb"></a-asset-item>
             <a-asset-item id="room_frame_glb" src="./src/gltf/room-frame.glb"></a-asset-item>
         </a-asset>
@@ -37,8 +35,8 @@
         </a-box>
         <a-gltf-model src="#room_frame_glb" position="0 2 -3" color="red"></a-gltf-model>
 
-        <a-gltf-model animation-mixer="clip: *" id="orion" src="#oriona_glb" position="3.79585 0 -4.25261"
-            scale="0.5 0.5 0.5" rotation="0 -60 0"></a-gltf-model>
+        <a-gltf-model webaudioresponse animation-mixer="clip: *" id="orion" src="#oriona_glb"
+            position="3.79585 0 -4.25261" scale="0.5 0.5 0.5" rotation="0 -60 0"></a-gltf-model>
 
         <a-entity id="rig">
             <a-camera></a-camera>
@@ -46,8 +44,8 @@
             <a-entity webaudiorequest id="right" move oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
 
-        <a-entity light="type: ambient; color: #93B7FF; intensity: 0.1" visible=""></a-entity>
-        <a-entity light="type: point; color: #93B7FF; intensity: 0.23" position="0 2 -1.9"></a-entity>
+        <a-entity light="type: ambient; color: #93B7FF; intensity: 0.7" visible=""></a-entity>
+        <a-entity light="type: point; color: #93B7FF; intensity: 0.1" position="0 2 -1.9"></a-entity>
 
     </a-scene>
 </body>
