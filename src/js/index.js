@@ -1,4 +1,3 @@
-import '../css/style.css';
 
 // import * as dat from 'dat.gui';
 

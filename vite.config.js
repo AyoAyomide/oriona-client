@@ -8,7 +8,7 @@ export default defineConfig((command, mode) => {
     }
   } else {
     return {
-      base: '/oriona',
+      base: '/oriona-client',
       plugins: [
         viteStaticCopy({
           targets: [
