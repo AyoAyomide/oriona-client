@@ -9,7 +9,6 @@ export default defineConfig((command, mode) => {
   } else {
     return {
       base: '/oriona',
-      assetsInclude: ['**/*.glb'],
       plugins: [
         viteStaticCopy({
           targets: [

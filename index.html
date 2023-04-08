@@ -25,14 +25,14 @@
 <body>
     <a-scene intro-audio renderer="antialias: true" color="grey">
         <a-asset>
-            <audio id="room" src="./src/sounds/music/_small.mp3" preload="auto"></audio>
+            <!-- <audio id="room" src="./src/sounds/music/_small.mp3" preload="auto"></audio> -->
             <!-- <audio id="intro" src="./src/sounds/audio/intro.mp3" preload="auto"></audio> -->
             <a-asset-item id="oriona_glb" src="./src/gltf/orion.glb"></a-asset-item>
             <a-asset-item id="room_frame_glb" src="./src/gltf/room-frame.glb"></a-asset-item>
         </a-asset>
-        <a-box sound="src: #room;autoplay: true;volume:0.5" position="0 2 -3" color="white" scale="10 4 8"
-            material="side:back;">
+        <a-box position="0 2 -3" color="white" scale="10 4 8" material="side:back;">
         </a-box>
+
         <a-gltf-model src="#room_frame_glb" position="0 2 -3" color="red"></a-gltf-model>
 
         <a-gltf-model webaudioresponse animation-mixer="clip: *" id="orion" src="#oriona_glb"
