@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oriona</title>
     <link rel="stylesheet" href="./src/css/style.css">
@@ -12,10 +13,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="./src/js/index.js"></script>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@fb96ab2/dist/aframe-extras.min.js"></script>>
-    <!-- <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script> -->
-    <!-- <script src="/src/pkg/aframe.js"></script> -->
-    <!-- <script type="module" src="./src/pkg/aframe_inspect.js" data-name="aframe-inspector"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@fb96ab2/dist/aframe-extras.min.js"></script>
     <script type="module" src="./src/js/components/move.js"></script>
     <script type="module" src="./src/js/components/webaudiorequest.js"></script>
     <script type="module" src="./src/js/components/webaudioresponse.js"></script>
@@ -25,8 +23,6 @@
 <body>
     <a-scene intro-audio renderer="antialias: true" color="grey">
         <a-asset>
-            <!-- <audio id="room" src="./src/sounds/music/_small.mp3" preload="auto"></audio> -->
-            <!-- <audio id="intro" src="./src/sounds/audio/intro.mp3" preload="auto"></audio> -->
             <a-asset-item id="oriona_glb" src="./src/gltf/orion.glb"></a-asset-item>
             <a-asset-item id="room_frame_glb" src="./src/gltf/room-frame.glb"></a-asset-item>
         </a-asset>

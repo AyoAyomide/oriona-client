@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 // import * as dat from 'dat.gui';
 
 // const gui = new dat.GUI();
