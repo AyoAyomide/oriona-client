@@ -34,9 +34,9 @@ jobs:
       - name: Setup env
         run: |
           # echo "VITE_SOCKET_URL=${{ secrets.REACT_APP_API_URL }}" >> .env
-          echo "VITE_SOCKET_URL=http://localhost:3380" >> .env
-          echo "VITE_REQUEST_URL=http://localhost:3380/api/request" >> .env
-          echo "VITE_RESPONSE_URL=http://localhost:3380/api/response" >> .env
+          echo "VITE_SOCKET_URL=https://oriona-server-4ppkba73wa-uc.a.run.app" >> .env
+          echo "VITE_REQUEST_URL=https://oriona-server-4ppkba73wa-uc.a.run.app/api/request" >> .env
+          echo "VITE_RESPONSE_URL=https://oriona-server-4ppkba73wa-uc.a.run.app/api/response" >> .env
 
           mv .env ./dist/.env
         shell: bash

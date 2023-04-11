@@ -12,7 +12,7 @@ AFRAME.registerComponent('webaudioresponse', {
             });
 
             socket.on("audio", (msg) => {
-                const audio = new Audio(`${import.meta.env.VITE_RESPONSE_URL}/${msg}`);
+                const audio = new Audio(`${import.meta.env.VITE_RESPONSE_URL}/_${msg}`);
                 this.el.setAttribute('sound', 'src', audio.src);
                 this.el.components.sound.playSound();
             });
